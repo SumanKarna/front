@@ -1,15 +1,17 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "react-toastify/dist/ReactToastify.min.css";
-import { Link, Outlet } from "react-router-dom";
 import "./Layout.css";
-import { useDispatch, useSelector } from "react-redux";
+import http from "../http";
 import { FrontNav } from "./FrontNav";
 import { Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
-import { clearStorage, fromStorage } from "../lib";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { clearUser, setUser } from "../store";
-import http from "../http";
+import { Link, Outlet } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.min.css";
+import { clearStorage, fromStorage } from "../lib";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import { useDispatch, useSelector } from "react-redux";
+
+
 
 export const Layout = () => {
   const [cartInfo, setCartInfo] = useState({qty:0, total:0})
